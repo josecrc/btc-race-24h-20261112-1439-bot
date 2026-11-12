@@ -46,7 +46,7 @@ await runBars({
         if (c <= sma * (1 - DIP_BPS / 10000)) {
           const cap = (state.equity() * BigInt(state.hello.caps.max_weight_bps)) / BPS;
           const spend = state.cash < cap ? state.cash : cap;
-          if (spend >= state.minNotional) {
+          if (spend >= state.hello.fees.min_notional_quote_units) {
             buys.push({ symbol: bar.symbol, quote_units: spend, max_slippage_bps: MAX_SLIPPAGE_BPS });
           }
         }
