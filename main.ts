@@ -5,9 +5,9 @@
 import { BPS, runBars, type Bar, type BuyInput, type SellInput } from './vendor/makefun-bars.ts';
 
 const WIN = 60;
-const DIP_BPS = 80;
-const TP_BPS = 80n;
-const SL_BPS = 80n;
+const DIP_BPS = 90;
+const TP_BPS = 100n;
+const SL_BPS = 250n;
 const MAX_SLIPPAGE_BPS = 100;
 
 const closes: number[] = [];
