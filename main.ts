@@ -1,3 +1,7 @@
+/**
+ * Mean-reversion bot for CBBTC/USDC on 1-minute bars.
+ * Buys -80 bps dips below the 60-bar SMA and exits at +80 bps TP or -80 bps SL.
+ */
 import { BPS, runBars, type Bar, type BarsState } from './vendor/makefun-bars.ts';
 
 const WIN = 60;
